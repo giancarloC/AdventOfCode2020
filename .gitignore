@@ -1,1 +1,4 @@
-*.exe
+#for rust specific items
+*/target
+*/Cargo.lock
+*/**/*.rs.bk
