@@ -41,7 +41,7 @@ fn find_trees(forest: Vec<Vec<char>>){
 //returns vector from given string representing files
 fn read_file() -> io::Result<Vec<Vec<char>>> {
     let f = File::open("./input/input.txt")?;
-    let mut f = BufReader::new(f);
+    let f = BufReader::new(f);
 
     let mut lines_of_chars: Vec<Vec<char>> = Vec::new();
     for line in f.lines(){

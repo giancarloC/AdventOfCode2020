@@ -17,8 +17,6 @@ fn find_multiple_trees(forest: Vec<Vec<char>>){
     let tree4 = find_trees(&forest, 1, 7) as i64;
     let tree5 = find_trees(&forest, 2, 1) as i64;
 
-    println!("tree2 {}", tree3);
-
     let answer = tree1*tree2*tree3*tree4*tree5;
 
     println!("Amount of trees: {}", answer);
@@ -53,7 +51,7 @@ fn find_trees(forest: &[Vec<char>], to_down: usize, to_right: usize) -> i32{
 //returns vector from given string representing files
 fn read_file() -> io::Result<Vec<Vec<char>>> {
     let f = File::open("./input/input.txt")?;
-    let mut f = BufReader::new(f);
+    let f = BufReader::new(f);
 
     let mut lines_of_chars: Vec<Vec<char>> = Vec::new();
     for line in f.lines(){
