@@ -26,7 +26,7 @@ fn find_sum_count() -> io::Result<i32> {
 
         if string == ""{
             //loops through map
-            for (key, val) in questions.iter(){
+            for (_key, val) in questions.iter(){
                 if val == &group_count{
                     count += 1;
                 }
@@ -51,7 +51,7 @@ fn find_sum_count() -> io::Result<i32> {
     }
 
     //loops through last one
-    for (key, val) in questions.iter(){
+    for (_key, val) in questions.iter(){
         if val == &group_count{
             count += 1;
         }

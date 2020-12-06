@@ -1,4 +1,4 @@
-#![allow(unused)]
+//#![allow(unused)]
 mod part1;
 mod part2;
 
