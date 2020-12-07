@@ -10,7 +10,6 @@ pub fn get_result(){
     }
 }
 
-//counts number of passports
 fn find_min_max_seats() -> io::Result<i32> {
     let f = File::open("./input/input.txt")?;
     let f = BufReader::new(f);

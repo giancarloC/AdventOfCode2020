@@ -3,7 +3,6 @@ use std::io::prelude::*;
 use std::fs::File;
 use std::collections::HashMap;
 
-
 pub fn get_result(){
     match find_sum_count() {
         Ok(num) => println!("Sum of the counts are: {}", num),
@@ -11,7 +10,6 @@ pub fn get_result(){
     }
 }
 
-//counts number of passports
 fn find_sum_count() -> io::Result<i32> {
     let f = File::open("./input/input.txt")?;
     let f = BufReader::new(f);
@@ -20,7 +18,6 @@ fn find_sum_count() -> io::Result<i32> {
     let mut group_count = 0;
     let mut questions: HashMap<char, i32> = HashMap::new();
 
-    //finds max seat
     for line in f.lines(){
         let string = line.unwrap();
 
