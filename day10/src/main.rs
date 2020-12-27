@@ -1,8 +1,7 @@
-#![allow(unused)]
+//#![allow(unused)]
 use std::io::{self, BufReader};
 use std::io::prelude::*;
 use std::fs::File;
-use std::collections::HashSet;
 use std::collections::HashMap;
 
 fn main(){
@@ -35,8 +34,6 @@ fn answer() -> io::Result<()> {
 
     let mut diff1 = 0; //lists how many jolts are 1 apart
     let mut diff3 = 0; //same but 3 apart
-    let mut combos = 1; //lists different number of combinations u can make with jolts
-
     let mut last = 0;
 
     for i in &jolts{
