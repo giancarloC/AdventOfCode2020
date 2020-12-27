@@ -1,8 +1,42 @@
 #![allow(unused)]
-mod part1;
-mod part2;
+use std::io::{self, BufReader};
+use std::io::prelude::*;
+use std::fs::File;
+
+/*
+use std::collections::HashSet;
+*/
 
 fn main(){
-    part1::get_result();
-    part2::get_result();
+    match part1() {
+        Ok(num) => println!("Part 1 answer: {}", num),
+        Err(_e) => println!("Incorrect Input"),
+    }
+
+    match part2() {
+        Ok(num) => println!("Part 2 answer: {}", num),
+        Err(_e) => println!("Incorrect Input"),
+    }
+}
+
+fn part1() -> io::Result<i32> {
+    let f = File::open("./src/input.txt")?;
+    let f = BufReader::new(f);
+    
+    for line in f.lines(){
+        let string = line.unwrap();
+    }
+     
+    return Ok(0);
+}
+
+fn part2() -> io::Result<i32> {
+    let f = File::open("./src/input.txt")?;
+    let f = BufReader::new(f);
+    
+    for line in f.lines(){
+        let string = line.unwrap();
+    }
+     
+    return Ok(0);
 }
